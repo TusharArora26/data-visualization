@@ -1,0 +1,133 @@
+
+---
+
+### index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .chart {
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Interactive Data Visualization</h1>
+
+        <div class="chart-container">
+            <div class="chart" id="chart1">
+                <h3>Bar Chart</h3>
+                <!-- Placeholder for dynamic chart (e.g., Plotly chart will be rendered here) -->
+            </div>
+
+            <div class="chart" id="chart2">
+                <h3>Line Chart</h3>
+                <!-- Placeholder for dynamic chart (e.g., Plotly chart will be rendered here) -->
+            </div>
+
+            <div class="chart" id="chart3">
+                <h3>Scatter Plot</h3>
+                <!-- Placeholder for dynamic chart (e.g., Plotly chart will be rendered here) -->
+            </div>
+
+            <div class="chart" id="chart4">
+                <h3>Pie Chart</h3>
+                <!-- Placeholder for dynamic chart (e.g., Plotly chart will be rendered here) -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Powered by <a href="https://plotly.com" target="_blank">Plotly</a> and <a href="https://matplotlib.org" target="_blank">Matplotlib</a></p>
+        </div>
+    </div>
+
+    <!-- Include Plotly.js or any JavaScript library for charting -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        // Example: Plotting a bar chart using Plotly.js
+        var trace1 = {
+            x: ['A', 'B', 'C', 'D', 'E'],
+            y: [10, 20, 30, 40, 50],
+            type: 'bar'
+        };
+
+        var data = [trace1];
+
+        var layout = {
+            title: 'Example Bar Chart',
+            xaxis: {
+                title: 'Category'
+            },
+            yaxis: {
+                title: 'Values'
+            }
+        };
+
+        Plotly.newPlot('chart1', data, layout);
+
+        // Additional chart rendering code can go here (for line charts, scatter plots, etc.)
+    </script>
+</body>
+
+</html>
